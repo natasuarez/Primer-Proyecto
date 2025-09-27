@@ -14,13 +14,12 @@ body {
   color: #333;
 }
 
-/* ENCABEZADO */
 .encabezado {
   grid-column: 1 / 3;
   background: #fff;
   padding: 0.5rem 2rem;
   display: flex;
-  justify-content: space-between; /* Esto separa logo y usuario */
+  justify-content: space-between; 
   align-items: center;
   border-bottom: 1px solid #ddd;
   gap: 2rem;
@@ -44,7 +43,6 @@ body {
   border-radius: 50%;
 }
 
-/* MENÚ LATERAL */
 .menu-lateral {
   background: #6c757d;
   border-right: 1px solid #444;
@@ -64,15 +62,12 @@ body {
   background: #5a6268;
 }
 
-/* CONTENIDO */
 main {
   padding: 2rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
-
-/* FILTROS */
 .filtros form {
   display: flex;
   flex-wrap: wrap;
@@ -96,8 +91,6 @@ main {
   border: 1px solid #ccc;
   border-radius: 6px;
 }
-
-/* BOTONES */
 .btn-azul {
   background: #002f67;
   color: #fff;
@@ -138,7 +131,6 @@ main {
   color: #fff;
 }
 
-/* TABLA */
 .tabla table {
   width: 100%;
   border-collapse: collapse;
@@ -171,7 +163,6 @@ main {
   margin-right: 0.5rem;
 }
 
-/* PAGINACIÓN */
 .paginacion {
   margin-top: 1rem;
   display: flex;
@@ -193,8 +184,6 @@ main {
   background: #3c6ea3;
   color: #fff;
 }
-
-/* VENTANA MODAL */
 dialog {
   border: none;
   border-radius: 8px;
