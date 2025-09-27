@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Administración de Estudiantes</title>
+ <link rel="stylesheet" href="../Style/styles.css">
+</head>
+<body>
+    <header class="encabezado">
+  <div class="logo">
+    <img src="../Assets/Img/quipux.jpg" alt="Logo Quipux">
+  </div>
+
+  <div class="usuario">
+    <span>Carolina Fernández Echeverry</span>
+    <img src="../Assets/Img/Carolina.jpg" alt="Usuario">
+  </div>
+</header>
+
+  <nav class="menu-lateral">
+    <ul>
+      <li><a href="#">Estudiantes</a></li>
+      <li><a href="#">Grupos</a></li>
+      <li><a href="#">Materias</a></li>
+      <li><a href="#">Evaluaciones</a></li>
+      <li><a href="#">Informes</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section class="filtros">
+      <h2>Administración de estudiantes</h2>
+      <form>
+        <label for="grado">Grado</label>
+        <select id="grado"></select>
+
+        <label for="grupo">Grupo</label>
+        <select id="grupo"></select>
+
+        <label for="tipo-doc">Identificación</label>
+        <select id="tipo-doc">
+          <option>TI</option>
+          <option>CC</option>
+        </select>
+        <input type="text" placeholder="Número documento">
+
+        <label for="estudiante">Estudiante</label>
+        <select id="estudiante">
+          <option>Seleccionar</option>
+        </select>
+
+        <button type="submit" class="btn-azul">Buscar</button>
+        <button type="reset" class="btn-gris">Limpiar</button>
+        <button type="button" class="btn-nuevo">+ Nuevo</button>
+      </form>
+    </section>
+
+    <section class="tabla">
+      <h3>Resultados</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Código</th>
+            <th>Identificación</th>
+            <th>Estudiante</th>
+            <th>Grado</th>
+            <th>Grupo</th>
+            <th>Estado</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2022101</td>
+            <td>TI 1088123456</td>
+            <td>Camila Fernández Rojas</td>
+            <td>10</td>
+            <td>A</td>
+            <td>En curso</td>
+            <td>
+              <button onclick="verEstudiante()">👁</button>
+              <button onclick="abrirModal()">🗑</button>
+            </td>
+          </tr>
+          <tr>
+            <td>2022102</td>
+            <td>TI 1088123499</td>
+            <td>Juan Felipe Montoya Ríos</td>
+            <td>10</td>
+            <td>A</td>
+            <td>Aprobado</td>
+            <td>
+              <button>👁</button>
+              <button onclick="abrirModal()">🗑</button>
+            </td>
+          </tr>
+          <tr>
+            <td>2022103</td>
+            <td>CC 1089456789</td>
+            <td>Luisa María Cruz Hernández</td>
+            <td>10</td>
+            <td>B</td>
+            <td>Reprobado</td>
+            <td>
+              <button>👁</button>
+              <button onclick="abrirModal()">🗑</button>
+            </td>
+          </tr>
+          <tr>
+            <td>2022104</td>
+            <td>CC 1088120099</td>
+            <td>Ana Maria Bedoya Lopez</td>
+            <td>10</td>
+            <td>B</td>
+            <td>En curso</td>
+            <td>
+              <button>👁</button>
+              <button onclick="abrirModal()">🗑</button>
+            </td>
+          </tr>
+          <tr>
+            <td>2022105</td>
+            <td>CC 1087013499</td>
+            <td>Santiago Sanchez Rivera</td>
+            <td>10</td>
+            <td>A</td>
+            <td>En curso</td>
+            <td>
+              <button>👁</button>
+              <button onclick="abrirModal()">🗑</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="paginacion">
+        <span>Mostrando 1 al 5 de 150 registros</span>
+        <nav>
+          <a href="#">Primero</a>
+          <a href="#">1</a>
+          <a href="#">2</a>
+          <a href="#">Último</a>
+        </nav>
+      </div>
+    </section>
+  </main>
+  <dialog id="ventana-eliminar">
+    <h3>Eliminar estudiante</h3>
+    <p>¿Estás seguro que deseas eliminar el registro?</p>
+    <div class="botones-modal">
+      <button onclick="cerrarModal()" class="btn-gris">No</button>
+      <button onclick="confirmarEliminar()" class="btn-azul">Sí, eliminar</button>
+    </div>
+  </dialog>
+  <script>
+    const modal = document.getElementById("ventana-eliminar");
+
+    function abrirModal() {
+      modal.showModal();
+    }
+
+    function cerrarModal() {
+      modal.close();
+    }
+
+    function confirmarEliminar() {
+      alert("Estudiante eliminado ✅");
+      modal.close();
+    }
+  </script>
+</body>
+</html>

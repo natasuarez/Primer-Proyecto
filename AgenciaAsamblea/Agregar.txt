@@ -1,0 +1,27 @@
+Agregar
+<?php
+include("config.php");
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $correo = $_POST['correo'];
+    $contraseña = $_POST['contraseña'];
+
+    // Validar que no estén vacíos
+    if (!empty($correo) && !empty($contraseña)) {
+        $sql = "INSERT INTO usuarios (correo, contraseña) VALUES (?, ?)";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("ss", $correo, $contraseña);
+
+        if ($stmt->execute()) {
+            echo "✅ Usuario agregado correctamente";
+        } else {
+            echo "❌ Error: " . $conn->error;
+        }
+
+        $stmt->close();
+    } else {
+        echo "⚠️ Debes llenar todos los campos.";
+    }
+}
+$conn->close();
+?>

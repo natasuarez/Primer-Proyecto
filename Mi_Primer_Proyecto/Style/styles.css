@@ -1,0 +1,225 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  grid-template-rows: auto 1fr;
+  min-height: 100vh;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f5f6fa;
+  color: #333;
+}
+
+/* ENCABEZADO */
+.encabezado {
+  grid-column: 1 / 3;
+  background: #fff;
+  padding: 0.5rem 2rem;
+  display: flex;
+  justify-content: space-between; /* Esto separa logo y usuario */
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  gap: 2rem;
+}
+
+.logo img {
+  height: 80px;
+  width: auto;
+}
+
+
+.usuario {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.usuario img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+/* MENÚ LATERAL */
+.menu-lateral {
+  background: #6c757d;
+  border-right: 1px solid #444;
+  padding: 1rem;
+}
+
+.menu-lateral a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  display: block;
+  padding: 0.5rem 0;
+  border-radius: 4px;
+}
+
+.menu-lateral a:hover {
+  background: #5a6268;
+}
+
+/* CONTENIDO */
+main {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* FILTROS */
+.filtros form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: flex-end;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.filtros label {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.filtros input,
+.filtros select,
+.filtros button {
+  padding: 0.4rem 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* BOTONES */
+.btn-azul {
+  background: #002f67;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-azul:hover {
+  background: #004a99;
+}
+
+.btn-gris {
+  background: #888;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-gris:hover {
+  background: #666;
+}
+
+.btn-nuevo {
+  background: #fff;
+  color: #007bff;
+  border: 1px solid #007bff;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-nuevo:hover {
+  background: #3c6ea3;
+  color: #fff;
+}
+
+/* TABLA */
+.tabla table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.tabla th,
+.tabla td {
+  padding: 0.8rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.tabla th {
+  background: #3c6ea3;
+  color: #fff;
+}
+
+.tabla tr:hover {
+  background: #f0f6ff;
+}
+
+.tabla button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-right: 0.5rem;
+}
+
+/* PAGINACIÓN */
+.paginacion {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.paginacion nav a {
+  margin: 0 0.3rem;
+  padding: 0.3rem 0.6rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-decoration: none;
+  color: #76a8e4;
+}
+
+.paginacion nav a:hover {
+  background: #3c6ea3;
+  color: #fff;
+}
+
+/* VENTANA MODAL */
+dialog {
+  border: none;
+  border-radius: 8px;
+  padding: 2rem;
+  max-width: 400px;
+  text-align: center;
+  font-family: inherit;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+dialog h3 {
+  margin-bottom: 1rem;
+  color: #3c6ea3;
+}
+
+dialog p {
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.botones-modal {
+  display: flex;
+  justify-content: space-around;
+}
