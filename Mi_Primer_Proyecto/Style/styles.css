@@ -68,7 +68,6 @@ main {
   flex-direction: column;
   gap: 2rem;
 }
-
 .filtros form {
   display: flex;
   flex-wrap: wrap;
@@ -92,7 +91,6 @@ main {
   border: 1px solid #ccc;
   border-radius: 6px;
 }
-
 .btn-azul {
   background: #002f67;
   color: #fff;
@@ -133,7 +131,6 @@ main {
   color: #fff;
 }
 
-/* TABLA */
 .tabla table {
   width: 100%;
   border-collapse: collapse;
@@ -166,7 +163,6 @@ main {
   margin-right: 0.5rem;
 }
 
-/* PAGINACIÓN */
 .paginacion {
   margin-top: 1rem;
   display: flex;
@@ -188,8 +184,6 @@ main {
   background: #3c6ea3;
   color: #fff;
 }
-
-/* VENTANA MODAL */
 dialog {
   border: none;
   border-radius: 8px;
