@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Quipux - Estudiante</title>
+  <link rel="stylesheet" href="../Style/estilos.css">
+</head>
+<body>
+  <div class="contenedor">
+    <aside class="barra">
+      <h1 class="logo">QUIPUX</h1>
+      <ul class="menu">
+        <li>Estudiantes</li>
+        <li>Grupos</li>
+        <li>Materias</li>
+        <li>Evaluaciones</li>
+        <li>Informes</li>
+      </ul>
+    </aside>
+
+    <main class="principal">
+      <header class="encabezado">
+        <span class="usuario">Carolina Fernández Echeverry</span>
+        <span class="icono">👤</span>
+      </header>
+
+      <section class="informacion">
+        <h2>Administración de estudiantes / Estudiante</h2>
+        <h3>Información del estudiante</h3>
+
+        <form class="formulario">
+          <label>Código
+            <input type="text" value="2022001">
+          </label>
+          <label>Identificación
+            <select>
+              <option>TI</option>
+              <option>CC</option>
+            </select>
+            <input type="text" placeholder="Número documento">
+          </label>
+          <label>Primer nombre
+            <input type="text">
+          </label>
+          <label>Segundo nombre (Opcional)
+            <input type="text">
+          </label>
+          <label>Primer apellido
+            <input type="text">
+          </label>
+          <label>Segundo apellido
+            <input type="text">
+          </label>
+          <label>Sexo
+            <div class="radios">
+              <input type="radio" name="sexo"> Femenino
+              <input type="radio" name="sexo"> Masculino
+            </div>
+          </label>
+          <label>Fecha de nacimiento
+            <input type="text" placeholder="DD/MM/AAAA">
+          </label>
+          <label>Teléfono residencia (Opcional)
+            <input type="text">
+          </label>
+          <label>Celular
+            <input type="text">
+          </label>
+          <label>Correo electrónico
+            <input type="email">
+          </label>
+          <label>Ciudad de residencia
+            <select>
+              <option>Seleccionar</option>
+            </select>
+          </label>
+          <label>Dirección de residencia
+            <input type="text">
+          </label>
+          <label>Grado
+            <select></select>
+          </label>
+          <label>Grupo
+            <select></select>
+          </label>
+        </form>
+      </section>
+
+      <section class="cursos">
+        <h3>Cursos realizados</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Código</th>
+              <th>Año</th>
+              <th>Grado</th>
+              <th>Grupo</th>
+              <th>Estado</th>
+              <th>Nota promedio</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2022101</td>
+              <td>2022</td>
+              <td>10</td>
+              <td>A</td>
+              <td><select><option>En curso</option></select></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>2021102</td>
+              <td>2021</td>
+              <td>9</td>
+              <td>C</td>
+              <td>Aprobado</td>
+              <td>4.0</td>
+            </tr>
+            <tr>
+              <td>2020103</td>
+              <td>2020</td>
+              <td>9</td>
+              <td>B</td>
+              <td>Reprobado</td>
+              <td>2.4</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
